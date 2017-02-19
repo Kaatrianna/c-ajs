@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app='LunchCheck'>
+  <head>
+    <meta charset="utf-8">
+    <title>Module 1 solution</title>
+    <script src = "JS/angular.min.js"></script>
+    <script src = "JS/app.js">        </script>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+  </head>
+  <body>
+    <h1>Check your dinner!</h1>
+    <div ng-controller='LunchCheckController'>
+        <input type="text" ng-model="inputText">
+        <button type="button" name = "Check If Too Much"
+                ng-click = "bCheckIfTooMuchClick();">
+                Ckeck If Too Much
+        </button>
+        <span><br>*Empty items considered as normal item, i.e. item1, , item2 counts as 3 items</span>
+        <div ng-class="colorClass"> {{message}} </div>
+    </div>
+
+  </body>
+</html>
